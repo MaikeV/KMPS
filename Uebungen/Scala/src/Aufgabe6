@@ -1,7 +1,0 @@
-Uebung 1:
-Aufgabe 6:
-    - iterative: O(N)
-    - recursive: O(2^N) (exponential)
-
-    - In Scala in einer Zeile moeglich:
-        def fib(n : Int) : Int = n match { case 0 | 1 => n case _ => fib(n - 1) + fib(n - 2) }
