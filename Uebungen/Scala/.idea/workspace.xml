@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8903fb94-2251-475d-a68a-c8e64287ee8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Aufgabe2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/Uebungen.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/out/production/Uebungen/Aufgabe1/Quicksort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/out/production/Uebungen/Aufgabe6/Fibonacci.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/src/Aufgabe1/Quicksort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/src/Aufgabe6/FibonacciIterativ.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scala.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Aufgabe6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FibonacciRecursive.sc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Uebungen.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Uebungen/Aufgabe1/Quicksort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/Uebungen/Aufgabe6/Fibonacci.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Aufgabe1/Quicksort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Aufgabe6/FibonacciIterativ.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Uebung2/Scala/src/Aufgabe1.sc" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +63,7 @@
       <updated>1602609071667</updated>
       <workItem from="1602609079184" duration="1796000" />
       <workItem from="1602695200876" duration="118000" />
+      <workItem from="1602948601845" duration="58000" />
     </task>
     <servers />
   </component>
