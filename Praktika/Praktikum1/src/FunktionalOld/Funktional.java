@@ -1,4 +1,4 @@
-package Funktional;
+package FunktionalOld;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -69,7 +69,6 @@ public class Funktional {
         if(tokenList.get(i + 2).equals("/" + tokenList.get(i))) {
             System.out.print(tokenList.get(i).substring(0, 1).toUpperCase() + tokenList.get(i).substring(1) +  ": " + tokenList.get(i + 1).substring(0, 1).toUpperCase() + tokenList.get(i + 1).substring(1) +  "\n");
             String tag = openTags.pop();
-            //System.out.println("Pop " + tag);
             i += 3;
             parseFile(tokenList, openTags, i);
         } else {
@@ -83,11 +82,10 @@ public class Funktional {
                     i++;
                     parseFile(tokenList, openTags, i);
                     return;
-                } else if(tag.equals("track") && isLast(tokenList, i, "track", false)) {
-                    System.out.print("]\n" );
+                } else if(tag.equals("track") && isLast(tokenList, i, "/track", false)) {
+                    System.out.print("\b\t]\n" );
                 }
-            } else if(tokenList.get(i).equals("track")) {
-
+            } else if(tokenList.get(i).equals("track") && isFirst(tokenList, i, "track", false)) {
                 System.out.print("Tracks: [" + "\n");
 //                i++;
 //                parseFile(tokenList, openTags, i);
@@ -101,13 +99,28 @@ public class Funktional {
     }
 
     public static boolean isLast(ArrayList<String> tokenList, int i, String obj, boolean found) {
-        if(tokenList.get(i).equals("album")) {
-            found = false;
+        if(i > 155) {
+            System.out.println(tokenList.get(i));
+        }
+        if(tokenList.get(i).equals("/album")) {
+            return true;
         } else if(tokenList.get(i).equals(obj)) {
-            found = true;
-            return found;
+            return true;
         } else {
             i++;
+            found = isLast(tokenList, i, obj, found);
+        }
+
+        return found;
+    }
+
+    public static boolean isFirst(ArrayList<String> tokenList, int i, String obj, boolean found) {
+        if(tokenList.get(i).equals("album")) {
+            return found;
+        } else if(tokenList.get(i).equals(obj)) {
+            return false;
+        } else {
+            i--;
             found = isLast(tokenList, i, obj, found);
         }
 
