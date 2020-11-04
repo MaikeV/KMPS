@@ -29,19 +29,24 @@ def parseTrack(list: List[String], track: Track, features: List[String], writers
 }
 
 @tailrec
-def parseAlbum(list:List[String], album: Album) : Album = list match {
+def parseAlbum(list:List[String], album: Album, inTrack: Boolean) : Album = list match {
   case Nil => album
-  case "title"::x::xs => parseAlbum(xs, album.copy(title = x))
-  case "date"::x::xs => parseAlbum(xs, album.copy(date = x))
-  case "artist"::x::xs => parseAlbum(xs, album.copy(artist = x))
-  case "track"::xs => parseAlbum(xs, album.copy(tracks = album.tracks:+parseTrack(xs, Track("", "", 0, Nil, Nil), Nil, Nil)))
+  case "title"::x::xs => inTrack match {
+    case true => parseAlbum(xs, album, inTrack)
+    case false => parseAlbum(xs, album.copy(title = x), inTrack)
+  }
+  case "date"::x::xs => parseAlbum(xs, album.copy(date = x), inTrack)
+  case "artist"::x::xs => parseAlbum(xs, album.copy(artist = x), inTrack)
+  case "track"::xs => parseAlbum(xs, album.copy(tracks = album.tracks:+parseTrack(xs, Track("", "", 0, Nil, Nil), Nil, Nil)), true)
+  case "/track"::xs => parseAlbum(xs, album, inTrack = false)
   case "/album"::xs => album
-  case _::xs => parseAlbum(xs, album)
+  case _::xs => parseAlbum(xs, album, inTrack)
 }
 
+@tailrec
 def parseFile(tokenList:List[String], albumList: List[Album]) : List[Album] = tokenList match {
   case Nil => albumList
-  case "album"::xs => parseFile(xs, albumList:+parseAlbum(xs, Album("", "", "", Nil)))
+  case "album"::xs => parseFile(xs, albumList:+parseAlbum(xs, Album("", "", "", Nil), inTrack = false))
   case _::xs => parseFile(xs, albumList)
 }
 
