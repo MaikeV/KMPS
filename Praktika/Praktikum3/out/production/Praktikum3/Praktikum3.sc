@@ -63,6 +63,50 @@ def printAlbum(albumList:List[Album], s:String): String = albumList match {
     s"\n\tArtist: $artist,\n\tTracks: [" + printTrack(tracks, "") + "]")
 }
 
+def map[A](list:List[A], f: A => A) : List[A]  = list match {
+  case Nil => Nil
+  case x::xs => f(x)::map(xs, f)
+}
+
+def polyMap[A, B](list:List[A], f: A => B) : List[B] = list match {
+  case Nil => Nil
+  case x::xs => f(x)::polyMap(xs, f)
+}
+
+def filter[A](list:List[A], condition: A => Boolean) : List[A] = list match {
+  case Nil => Nil
+  case x::xs =>
+    if(condition(x)) {
+      x::filter(xs, condition)
+    } else {
+      filter(xs, condition)
+    }
+}
+
+def partition[A](list:List[A], condition: A => Boolean) : List[List[A]] = list match {
+  case Nil => Nil
+  case x::xs =>
+    @tailrec
+    def findNextCondition(list:List[A], ls:List[A]) : List[A] = list match {
+      case Nil => ls
+      case x::xs => if(condition(x)) xs else findNextCondition(xs, ls:+x)
+    }
+
+    @tailrec
+    def buildInnerList(list:List[A], ys:List[A]) : List[A] = list match {
+      case Nil => ys
+      case a::as => if(condition(a)) ys else buildInnerList(as, ys:+a)
+    }
+
+    @tailrec
+    def buildOuterList(list:List[A], ys:List[List[A]]) : List[List[A]] = list match {
+      case Nil =>  ys
+      case a::as => buildOuterList(findNextCondition(as, Nil), ys :+ buildInnerList(a :: as, Nil))
+    }
+
+    buildOuterList(x::xs, Nil)
+}
+
 def main() : Unit = {
   val list = Source.fromFile("E:\\Studium\\KMPS\\KMPS\\Praktika\\Praktikum2\\src\\alben.xml").toList
   val tokenList = createTokenList(list, Nil, "")
@@ -72,6 +116,34 @@ def main() : Unit = {
   val albumList = parseFile(tokenList, Nil)
   println(albumList)
   print(printAlbum(albumList, ""))
+
+  val thriller = Album("Thriller","30.11.1982","Michael Jackson",List(Track("Wanna Be Startin Somethin","6:03",3,List(),List("Michael Jackson")), Track("Baby Be Mine","4:20",4,List(),List("Rod Temperton")), Track("The Girl Is Mine","3:42",3,List("Paul McCartney"),List("Michael Jackson")), Track("Thriller","5:57",5,List(),List("Rod Temperton")), Track("Billie Jean","4:54",5,List(),List("Michael Jackson")), Track("Human Nature","4:06",3,List(),List("Steve Porcaro", "John Bettis")), Track("P.Y.T. (Pretty Young Thing)","3:59",4,List(),List("James Ingram", "Quincy Jones")), Track("The Lady in My Life","5:00",3,List(),List("Rod Temperton"))))
+
+  map[Int](1::2::3::Nil, x => x + x)
+
+  println()
+  println()
+
+  println(map[Album](albumList, Album => Album.copy(title = Album.title.toUpperCase)))
+  println(map[Album](albumList, Album => Album.copy(tracks = map[Track](Album.tracks, Track => Track.copy(Track.title.toUpperCase)))))
+  println(polyMap[Album, List[String]](albumList, Album => polyMap[Track, String](Album.tracks, Track => Track.length)))
+  println(filter[Track](thriller.tracks, Track => Track.rating >= 4))
+  println(polyMap[Track, String](filter[Track](thriller.tracks, Track => filter[String](Track.writers, w => w == "Rod Temperton") != Nil), Track => Track.title))
+  println(partition[Track](thriller.tracks, Track => Track.title == "Thriller"))
+  println(
+    polyMap[List[Char], String](
+      filter[List[Char]](
+        partition[Char](
+          list, a=> (a == '<' || a == '>')
+        ), b => (b != '\n' || b != '\r' || b != '\t')
+      ), (c: List[Char]) => c.mkString
+    )
+  )
 }
 
 main()
+
+
+map[Int](1::2::3::Nil, x => x + x)
+filter[Int](1::2::3::4::5::6::6::Nil, x => x % 2 == 0)
+partition[Int](1::2::3::2::1::3::3::4::Nil, x => x == 3)
