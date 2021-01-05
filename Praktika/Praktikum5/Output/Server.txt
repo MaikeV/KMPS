@@ -1,0 +1,66 @@
+Server started
+No tickets
+n: new Ticket, q: Quit
+
+New Client: client1
+No tickets
+n: new Ticket, q: Quit
+No tickets
+n: new Ticket, q: Quit
+
+New Client: client2
+No tickets
+n: new Ticket, q: Quit
+No tickets
+n: new Ticket, q: Quit
+
+New Client: client3
+No tickets
+n: new Ticket, q: Quit
+n
+
+Tickets:
+ticket1 -> unassigned
+n: new Ticket, q: Quit
+n
+
+Tickets:
+ticket1 -> unassigned
+ticket2 -> unassigned
+n: new Ticket, q: Quit
+n
+
+Tickets:
+ticket1 -> unassigned
+ticket2 -> unassigned
+ticket3 -> unassigned
+n: new Ticket, q: Quit
+n
+
+Tickets:
+ticket1 -> unassigned
+ticket2 -> unassigned
+ticket3 -> unassigned
+ticket4 -> unassigned
+n: new Ticket, q: Quit
+
+Tickets:
+ticket1 -> unassigned
+ticket2 -> client1
+ticket3 -> unassigned
+ticket4 -> unassigned
+n: new Ticket, q: Quit
+
+Tickets:
+ticket1 -> client2
+ticket2 -> client1
+ticket3 -> unassigned
+ticket4 -> unassigned
+n: new Ticket, q: Quit
+
+Tickets:
+ticket1 -> client2
+ticket2 -> client1
+ticket3 -> unassigned
+ticket4 -> client3
+n: new Ticket, q: Quit

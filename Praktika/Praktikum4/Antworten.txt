@@ -1,0 +1,22 @@
+iife1:
+In der Ausgabe sind zuerst alle "Hello from Goroutine"s zu sehen und
+dann erst die "Goroutines ends"s
+Der Effekt tritt auf, weil die Schleife weiter laeuft, waehrend parallel
+dazu die goroutines laufen
+Ausserdem wird als Index immer 10 ausgegeben, da Schleife weiterlaeuft, 
+waehrend die Groutinen "darin" laufen und der Zaehler seinen Endwert erreicht, 
+bevor die Ausgaben der Goroutine stattfinden
+
+iife2:
+Jetzt gibt es zu jeder Nummer im Schleifendurchlauf eine passende Ausgabe, da
+der jeweilige int-Wert in die IIFE der Goroutine reingereicht wird und nicht 
+ueber das Lexical Scoping darauf zugegriffen wird.
+
+tightLoop1 und 2:
+Das Programm gibt in beiden Faellen die Anzahl der Prozessoren ( in tightLoop2 -1) zurueck und 0
+fuer den Wert von x.
+Beide Programme verhalten sich gleich, da durch das pre-emptive Scheduling die 
+Schleife unterbrochen wird
+
+
+

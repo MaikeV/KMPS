@@ -1,0 +1,197 @@
+[Server]
+Server started
+No tickets
+n: new Ticket, q: Quit
+
+[Client1]
+Client started
+Please enter Client ID:
+client1
+Client: client1
+Tickets:
+No tickets
+number: self assign, q: quit
+
+[Server]
+New Client: client1
+No tickets
+n: new Ticket, q: Quit
+No tickets
+n: new Ticket, q: Quit
+
+[Client2]
+Client started
+Please enter Client ID:
+client2
+Client: client2
+Tickets:
+No tickets
+number: self assign, q: quit
+
+[Server]
+New Client: client2
+No tickets
+n: new Ticket, q: Quit
+No tickets
+n: new Ticket, q: Quit
+
+[Client1]
+Tickets:
+No tickets
+number: self assign, q: quit
+
+[Client3]
+Client started
+Please enter Client ID:
+client3
+Client: client3
+Tickets:
+No tickets
+number: self assign, q: quit
+
+[Client1 and 2]
+Tickets:
+No tickets
+number: self assign, q: quit
+
+[Server]
+New Client: client3
+No tickets
+n: new Ticket, q: Quit
+n
+
+[Server]
+Tickets:
+ticket1 -> unassigned
+n: new Ticket, q: Quit
+n
+
+[Client1, 2 and 3]
+Tickets:
+1: ticket1 -> Not assigned
+number: self assign, q: quit
+
+[Server]
+Tickets:
+ticket1 -> unassigned
+ticket2 -> unassigned
+n: new Ticket, q: Quit
+n
+
+[Client1, 2 and 3]
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> Not assigned
+number: self assign, q: quit
+
+[Server]
+Tickets:
+ticket1 -> unassigned
+ticket2 -> unassigned
+ticket3 -> unassigned
+n: new Ticket, q: Quit
+n
+
+[Client1, 2 and 3]
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> Not assigned
+3: ticket3 -> Not assigned
+number: self assign, q: quit
+
+[Server]
+Tickets:
+ticket1 -> unassigned
+ticket2 -> unassigned
+ticket3 -> unassigned
+ticket4 -> unassigned
+n: new Ticket, q: Quit
+
+[Client1, 2 and 3]
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> Not assigned
+3: ticket3 -> Not assigned
+4: ticket4 -> Not assigned
+number: self assign, q: quit
+
+[Input Client1]
+2
+
+[Client1]
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> Not assigned
+number: self assign, q: quit
+
+[Server]
+Tickets:
+ticket1 -> unassigned
+ticket2 -> client1
+ticket3 -> unassigned
+ticket4 -> unassigned
+n: new Ticket, q: Quit
+
+[Client1, 2 and 3]
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> Not assigned
+number: self assign, q: quit
+
+[Input Client2]
+1
+
+[Client2]
+Tickets:
+1: ticket1 -> client2
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> Not assigned
+number: self assign, q: quit
+
+[Server]
+Tickets:
+ticket1 -> client2
+ticket2 -> client1
+ticket3 -> unassigned
+ticket4 -> unassigned
+n: new Ticket, q: Quit
+
+[Client1, 2 and 3]
+Tickets:
+1: ticket1 -> client2
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> Not assigned
+number: self assign, q: quit
+
+[Input Client3]
+4
+
+[Client3]
+Tickets:
+1: ticket1 -> client2
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> client3
+number: self assign, q: quit
+
+[Server]
+Tickets:
+ticket1 -> client2
+ticket2 -> client1
+ticket3 -> unassigned
+ticket4 -> client3
+n: new Ticket, q: Quit
+
+[Client1, 2 and 3]
+Tickets:
+1: ticket1 -> client2
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> client3
+number: self assign, q: quit

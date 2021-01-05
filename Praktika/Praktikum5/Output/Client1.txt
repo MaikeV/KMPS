@@ -1,0 +1,60 @@
+Client started
+Please enter Client ID:
+client1
+Client: client1
+Tickets:
+No tickets
+number: self assign, q: quit
+Tickets:
+No tickets
+number: self assign, q: quit
+Tickets:
+No tickets
+number: self assign, q: quit
+Tickets:
+No tickets
+number: self assign, q: quit
+Tickets:
+1: ticket1 -> Not assigned
+number: self assign, q: quit
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> Not assigned
+number: self assign, q: quit
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> Not assigned
+3: ticket3 -> Not assigned
+number: self assign, q: quit
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> Not assigned
+3: ticket3 -> Not assigned
+4: ticket4 -> Not assigned
+number: self assign, q: quit
+2
+50
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> Not assigned
+number: self assign, q: quit
+Tickets:
+1: ticket1 -> Not assigned
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> Not assigned
+number: self assign, q: quit
+Tickets:
+1: ticket1 -> client2
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> Not assigned
+number: self assign, q: quit
+Tickets:
+1: ticket1 -> client2
+2: ticket2 -> client1
+3: ticket3 -> Not assigned
+4: ticket4 -> client3
+number: self assign, q: quit

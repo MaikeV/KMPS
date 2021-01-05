@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fdfe48a-8519-4adc-a831-b2db7c323bd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Antworten.txt" afterDir="false" />
+    <list default="true" id="65fa5555-2940-40f7-a16a-f0f638efbcc8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Praktikum4/Antworten.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Praktikum5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/Client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Output/Client1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Output/Client2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Output/Client3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Output/Server.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Output/Timeline.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/Server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Praktikum4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Praktikum4/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,80 +34,55 @@
   <component name="GoLibraries">
     <option name="urls">
       <list>
-        <option value="file://$PROJECT_DIR$" />
+        <option value="file://$PROJECT_DIR$/../../../../../Development/Go/src/src" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1lEwoc8dtGPvj0CJmKNzUgVG3VI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1mYbT4qOgXlU0y2gyOFU8b1rPN0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable..is.expanded" value="false" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
-  <component name="RunManager" selected="Go Build.go build leak.go">
-    <configuration name="go build iife1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Praktikum4" />
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Studium\KMPS\KMPS\Praktika\Praktikum5\Server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build Client.go">
+    <configuration name="go build Client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Praktikum5" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/iife1.go" />
+      <filePath value="$PROJECT_DIR$/Client/Client.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build iife2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Praktikum4" />
+    <configuration name="go build Server.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Praktikum5" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/iife2.go" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build leak.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Praktikum4" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/leak.go" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build responsive.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Praktikum4" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/responsive.go" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build tight_loop1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Praktikum4" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/tight_loop1.go" />
+      <filePath value="$PROJECT_DIR$/Server/Server.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build leak.go" />
-        <item itemvalue="Go Build.go build iife2.go" />
-        <item itemvalue="Go Build.go build iife1.go" />
-        <item itemvalue="Go Build.go build tight_loop1.go" />
-        <item itemvalue="Go Build.go build responsive.go" />
+        <item itemvalue="Go Build.go build Server.go" />
+        <item itemvalue="Go Build.go build Client.go" />
       </list>
     </recent_temporary>
   </component>
@@ -115,8 +101,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
